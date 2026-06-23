@@ -1,55 +1,60 @@
-# DSA Q1: ZigZag Conversion
+# Dell Inventory Management System
 
-## Problem
+## Problem Statement
 
-Convert the string `PAYPALISHIRING` into zigzag form using `numRows = 3`.
+This project is a functional inventory management system for a Dell e-commerce application. It uses a JavaScript array to manage Dell product names and allows users to display, add, remove, and check product availability.
 
-Pattern:
+## Technologies Used
 
-```text
-P   A   H   N
-A P L S I I G
-Y   I   R
+- HTML
+- CSS
+- JavaScript
+
+## Features
+
+- Display all Dell products
+- Add a new product
+- Remove an existing product
+- Check product availability
+- Case-insensitive product search
+
+## Data Structure Used
+
+The project uses a JavaScript array:
+
+```javascript
+var inventory = [
+    "Dell Inspiron",
+    "Dell XPS",
+    "Dell Latitude",
+    "Dell Alienware"
+];
 ```
 
-Output:
+## CRUD Operations
 
-```text
-PAHNAPLSIIGYIR
-```
+- Create: `addProduct()`
+- Read: `displayInventory()`
+- Delete: `removeProduct()`
+- Check availability: `checkProduct()`
 
-## Logic
+## Testing
 
-The HTML page is used only for input and output. The actual ZigZag Conversion algorithm is written in JavaScript inside the `convert(s, numRows)` function.
+1. Load the application.
+   Expected result: Initial Dell products are displayed.
 
-The program creates rows using a JavaScript array. It moves down and up through the rows to create the zigzag pattern.
+2. Add `Dell Vostro`.
+   Expected result: `Dell Vostro` appears in the inventory list.
 
-Movement:
+3. Remove `Dell XPS`.
+   Expected result: `Dell XPS` is removed from the inventory list.
 
-```text
-0 -> 1 -> 2 -> 1 -> 0
-```
+4. Check `Dell Latitude`.
+   Expected result: `Dell Latitude is in stock.`
 
-## Time Complexity
-
-```text
-O(n)
-```
-
-## Space Complexity
-
-```text
-O(n)
-```
+5. Check `Dell G15`.
+   Expected result: `Dell G15 is out of stock.`
 
 ## How to Run
 
-Open `zigzag.html` in a browser.
-
-Enter a string and number of rows, then click `Convert`.
-
-You can also check the default output in the browser console.
-
-## Viva Answer
-
-HTML is used only to take input and display output. The actual DSA logic is implemented in JavaScript using the `convert(s, numRows)` function.
+Open `index.html` in a web browser.

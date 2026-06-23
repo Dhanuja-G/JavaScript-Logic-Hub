@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dell Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">Dell E-Commerce</p>
+            <h1>Dell Inventory Management System</h1>
+            <p class="subtitle">Manage product availability using JavaScript arrays.</p>
+        </div>
+        <div class="metrics">
+            <div class="metric">
+                <span class="metric-label">Total Products</span>
+                <strong id="totalCount">0</strong>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Products In Stock</span>
+                <strong id="stockCount">0</strong>
+            </div>
+        </div>
+    </header>
+
+    <section class="controls">
+        <div class="section">
+            <label for="productInput">Add Product</label>
+            <div class="action-row">
+                <input type="text" id="productInput" placeholder="Example: Dell Vostro">
+                <button onclick="addProduct()">Add</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <label for="removeInput">Remove Product</label>
+            <div class="action-row">
+                <input type="text" id="removeInput" placeholder="Example: Dell XPS">
+                <button onclick="removeProduct()">Remove</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <label for="checkInput">Check Availability</label>
+            <div class="action-row">
+                <input type="text" id="checkInput" placeholder="Example: Dell Latitude">
+                <button onclick="checkProduct()">Check</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="inventory-panel">
+        <div class="panel-header">
+            <h2>Current Inventory</h2>
+            <span>Live catalog</span>
+        </div>
+        <ul id="inventoryList"></ul>
+    </section>
+
+    <p id="message"></p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
