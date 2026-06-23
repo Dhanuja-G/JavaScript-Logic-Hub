@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZigZag Conversion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #eef4f9;
+            color: #172033;
+            min-height: 100vh;
+            padding: 32px 16px;
+        }
+
+        .container {
+            width: min(100%, 860px);
+            margin: auto;
+            background: white;
+            padding: 34px;
+            border-radius: 8px;
+            border: 1px solid #d8e2ec;
+            box-shadow: 0 18px 36px rgba(15, 35, 55, 0.12);
+        }
+
+        .header {
+            border-bottom: 1px solid #e1e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+        }
+
+        .eyebrow {
+            color: #006bb6;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            color: #102033;
+            font-size: 32px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            margin-top: 8px;
+            color: #66778a;
+            font-size: 15px;
+        }
+
+        .tool-panel {
+            background: #f8fafc;
+            border: 1px solid #e1e8f0;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 160px;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #c5d4e3;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            background: white;
+        }
+
+        input:focus {
+            border-color: #006bb6;
+            box-shadow: 0 0 0 3px rgba(0, 107, 182, 0.13);
+        }
+
+        button {
+            width: 100%;
+            min-height: 50px;
+            border-radius: 8px;
+            background: #006bb6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        button:hover {
+            background: #00548f;
+            transform: translateY(-1px);
+        }
+
+        .result-panel {
+            margin-top: 24px;
+            border-top: 1px solid #e1e8f0;
+            padding-top: 24px;
+        }
+
+        .result-label {
+            color: #102033;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #output {
+            font-weight: bold;
+            color: #087a2f;
+            font-size: 22px;
+            overflow-wrap: anywhere;
+        }
+
+        #patternOutput {
+            margin-top: 16px;
+            background: white;
+            border-left: 4px solid #006bb6;
+            border-radius: 8px;
+            padding: 16px;
+            white-space: pre;
+            overflow-x: auto;
+            font-family: Consolas, monospace;
+            line-height: 1.7;
+            box-shadow: inset 0 0 0 1px #e8eef5;
+        }
+
+        @media (max-width: 680px) {
+            .container {
+                padding: 22px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ZigZag Conversion</h1>
+            <p class="subtitle">Convert a string into zigzag order using JavaScript.</p>
+        </div>
+
+        <div class="tool-panel">
+            <div class="form-grid">
+                <input type="text" id="stringInput" value="PAYPALISHIRING" placeholder="Enter string">
+                <input type="number" id="rowInput" value="3" min="1" placeholder="Rows">
+            </div>
+            <button onclick="showConversion()">Convert</button>
+        </div>
+
+        <div class="result-panel">
+            <p class="result-label">Output</p>
+            <p id="output"></p>
+            <pre id="patternOutput"></pre>
+        </div>
+    </div>
+
+    <script src="zigzag.js"></script>
+</body>
+</html>
